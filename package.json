@@ -1,0 +1,39 @@
+{
+  "name": "dshx-patch-board",
+  "version": "1.0.4",
+  "private": true,
+  "description": "A DSH settings page that lists local patches and whether each is still applied; also gives third-party settings nav entries their own icons.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis"
+  ],
+  "author": "callaumyan-design",
+  "license": "MIT",
+  "homepage": "https://github.com/callaumyan-design/dshx-patch-board#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callaumyan-design/dshx-patch-board.git"
+  },
+  "bugs": {
+    "url": "https://github.com/callaumyan-design/dshx-patch-board/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}
